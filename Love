@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Anniversary ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9ecf,#ffd6e8);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+.container{
+    padding:40px 20px;
+}
+
+img{
+    width:220px;
+    border-radius:20px;
+    margin:20px 0;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+h1{
+    font-size:40px;
+}
+
+p{
+    font-size:20px;
+    margin:15px 0;
+}
+
+button{
+    margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff4d88;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#message{
+    display:none;
+    margin-top:30px;
+    font-size:22px;
+}
+
+#days{
+    font-size:30px;
+    font-weight:bold;
+    margin-top:20px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<!-- เปลี่ยนชื่อแฟนตรงนี้ -->
+<h1>ถึง...ที่รัก ❤️</h1>
+
+<!-- เปลี่ยนรูป -->
+<img src="yourphoto.jpg">
+
+<!-- เปลี่ยนข้อความ -->
+<p>ขอบคุณที่อยู่กับเค้ามาตลอดนะ</p>
+
+<div id="days"></div>
+
+<button onclick="showLove()">
+กดตรงนี้ 💕
+</button>
+
+<div id="message">
+
+<!-- เปลี่ยนข้อความได้ -->
+<p>
+สุขสันต์วันครบรอบนะ<br><br>
+ขอบคุณที่เข้ามาเป็นความสุขของเค้า<br>
+เค้าจะรักเธอไปนานๆ ❤️
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+// วันที่เริ่มคบ
+let startDate = new Date("2025-07-26");
+
+let today = new Date();
+
+let diff = today - startDate;
+
+let days = Math.floor(diff/(1000*60*60*24));
+
+document.getElementById("days").innerHTML=
+"เราคบกันมา <br>"+days+" วัน ❤️";
+
+function showLove(){
+
+document.getElementById("message").style.display="block";
+
+}
+</script>
+
+</body>
+</html>
